@@ -1,8 +1,9 @@
 class Orders < ActiveRecord::Migration[6.1]
   def change
-    create_table :Orders do |t|
-    t.integer :product_id
+    create_table :orders do |t|
+    t.string :date
+    t.string :total
     t.integer :user_id
-    t.string  :purchased_products, array: true, default: []
+    end
   end
 end
