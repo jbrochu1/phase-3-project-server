@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-    has_many :order_product_association
-    has_many :products, through: :order_product_association
+    has_many :opas
+    has_many :products, through: :opas
     belongs_to :user
 end
