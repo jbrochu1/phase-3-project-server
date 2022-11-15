@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
   has_many :opas
 
-  #   Favorit product
+  #   Favorite product
   def fav_prod
     return nill if opas.count == 0
 
