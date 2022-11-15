@@ -34,12 +34,16 @@ Product.create(name: "6 PIPE BLK STL", description: "6\" PIPE BLACK STEEL", cate
 
 o1 = Order.create(date: "23.12.2012", total: "$25", user_id: 1)
 o2 = Order.create(date: "13.11.2013", total: "$28", user_id: 1)
-o3 = Order.create(date: "20.11.2005", total: "$29", user_id: 2)
+o3 = Order.create(date: "20.11.2015", total: "$29", user_id: 2)
+o4 = Order.create(date: "10.12.2020", total: "$30", user_id: 3)
 
 opa1 = Opa.create(order_id: o1.id, product_id: p1.id)
 opa2 = Opa.create(order_id: o1.id, product_id: p2.id)
 opa3 = Opa.create(order_id: o2.id, product_id: p3.id)
 opa4 = Opa.create(order_id: o3.id, product_id: p4.id)
+opa5 = Opa.create(order_id: o3.id, product_id: p1.id)
+opa6 = Opa.create(order_id: o4.id, product_id: p1.id)
+opa7 = Opa.create(order_id: o4.id, product_id: p2.id)
 
 
 

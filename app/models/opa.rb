@@ -9,4 +9,5 @@ class Opa < ActiveRecord::Base
   def print_details
     "order number: #{order_id}, date: #{order.date}, product name: #{product.name}, product category: #{product.category}, price: $#{product.price}"
   end
+   
 end
