@@ -12,14 +12,29 @@ class ApplicationController < Sinatra::Base
     product.to_json
   end
 
-  # post '/baked_goods' do
-  #   baked_good = BakedGood.create(
-  #     name: params[:name],
-  #     price: params[:price],
-  #     bakery_id: params[:bakery_id]
-  #   )
-  #   baked_good.to_json
-  # end
+  get "/orders" do
+    orders = Order.all
+    orders.to_json
+  end
+
+  get "/opas" do
+    opas = Opa.all
+    opas.to_json
+  end
+
+  get "/users" do
+    users = User.all
+    users.to_json
+  end
+
+  post '/orders' do
+    baked_good = BakedGood.create(
+      name: params[:name],
+      price: params[:price],
+      bakery_id: params[:bakery_id]
+    )
+    baked_good.to_json
+  end
 
   # patch '/bakeries/:id' do
   #   bakery = Bakery.find(params[:id])
