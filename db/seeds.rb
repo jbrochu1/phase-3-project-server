@@ -32,4 +32,8 @@ Product.create(name: "3 PIPE BLK STL", description: "3\" PIPE BLACK STEEL", cate
 Product.create(name: "4 PIPE BLK STL", description: "4\" PIPE BLACK STEEL", category: "PIPE", price: 3.75, img: "https://www.plumbingsupplynow.com/pub/media/webp_image/catalog/product/cache/9d08971813a040f8f96067a40f75c615/b/l/blacknipplelong_109.webp")
 Product.create(name: "6 PIPE BLK STL", description: "6\" PIPE BLACK STEEL", category: "PIPE", price: 4.50, img: "https://www.plumbingsupplynow.com/pub/media/webp_image/catalog/product/cache/9d08971813a040f8f96067a40f75c615/b/l/blacknipplelong_109.webp")
 
+Order.create(date: "23.12.2012", total: "$25", user_id: 1)
+
+Opa.create(order_id: 1, product_id: 1)
+
 puts "Done seeding!"
