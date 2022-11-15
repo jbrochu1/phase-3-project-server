@@ -35,5 +35,6 @@ Product.create(name: "6 PIPE BLK STL", description: "6\" PIPE BLACK STEEL", cate
 Order.create(date: "23.12.2012", total: "$25", user_id: 1)
 
 Opa.create(order_id: 1, product_id: 1)
+Opa.create(order_id: 1, product_id: 2)
 
 puts "Done seeding!"
