@@ -32,12 +32,21 @@ class ApplicationController < Sinatra::Base
     users.to_json
   end
 
+  post '/users' do
+    new_user = User.create(
+      name: params[:name],
+      admin: params[:admin]
+    )
+    new_user.to_json
+  end
+
   post '/orders' do
     new_order = Order.create(
       date: params[:date],
       total: params[:total],
       user_id: params[:user_id]
     )
+    new_order
     new_order.to_json
   end
 
@@ -53,7 +62,11 @@ class ApplicationController < Sinatra::Base
   patch '/products/:id' do
     product = Product.find(params[:id])
     product.update(
-      
+      name: params[:name],
+      description: params[:description],
+      category: params[:category],
+      price: params[:price],
+      img: params[:img]
     )
     product.to_json
   end
@@ -66,6 +79,7 @@ class ApplicationController < Sinatra::Base
 
   # delete "/orders/:id" do
   #   order = Order.find(params[:id])
+  #   order.destroy
   #   order.to_json
   # end
 
