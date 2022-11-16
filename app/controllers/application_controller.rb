@@ -12,6 +12,11 @@ class ApplicationController < Sinatra::Base
     product.to_json
   end
 
+  get "/products/favorites" do
+    fav_products = Product.fav_prod
+    fav_products.to_json
+  end
+
   get "/orders" do
     orders = Order.all
     orders.to_json
