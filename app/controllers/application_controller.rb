@@ -12,10 +12,10 @@ class ApplicationController < Sinatra::Base
     product.to_json
   end
 
-  get "/products/favorites" do
-    fav_products = Product.fav_prod
-    fav_products.to_json
-  end
+  # get "/favproducts" do
+  #   fav_products = Product.all.fav_prod
+  #   fav_products.to_json
+  # end
 
   get "/orders" do
     orders = Order.all
@@ -45,15 +45,6 @@ class ApplicationController < Sinatra::Base
     new_user.to_json
   end
 
-  post '/orders' do
-    new_order = Order.create(
-      date: params[:date],
-      total: params[:total],
-      user_id: params[:user_id]
-    )
-    new_order.to_json
-  end
-
   post '/products' do
     new_product = Product.create(
       name: params[:name],
@@ -63,6 +54,15 @@ class ApplicationController < Sinatra::Base
       img: params[:img]
     )
     new_product.to_json
+  end
+
+  post '/orders' do
+    new_order = Order.create(
+      date: params[:date],
+      total: params[:total],
+      user_id: params[:user_id]
+    )
+    new_order.to_json
   end
 
   post '/opas' do
@@ -81,6 +81,7 @@ class ApplicationController < Sinatra::Base
       description: params[:description],
       category: params[:category],
       price: params[:price],
+      supply: params[:supply],
       img: params[:img]
     )
     product.to_json

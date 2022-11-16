@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2022_11_14_223641) do
     t.string "description"
     t.string "category"
     t.string "price"
+    t.integer "supply"
     t.string "img"
   end
 
