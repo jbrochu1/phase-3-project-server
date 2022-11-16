@@ -50,17 +50,35 @@ class ApplicationController < Sinatra::Base
     new_opa.to_json
   end
 
+  patch '/products/:id' do
+    product = Product.find(params[:id])
+    product.update(
+      
+    )
+    product.to_json
+  end
+
   # patch '/bakeries/:id' do
   #   bakery = Bakery.find(params[:id])
   #   bakery.update(name: params[:name])
   #   bakery.to_json
   # end
 
-  # delete '/baked_goods/:id' do
-  #   baked_good = BakedGood.find(params[:id])
-  #   baked_good.destroy
-  #   baked_good.to_json
+  # delete "/orders/:id" do
+  #   order = Order.find(params[:id])
+  #   order.to_json
   # end
 
+  delete "/products/:id" do
+    product = Product.find(params[:id])
+    product.destroy
+    product.to_json
+  end
+
+  delete "/users/:id" do
+    user = Users.find(params[:id])
+    user.destroy
+    user.to_json
+  end
 
 end

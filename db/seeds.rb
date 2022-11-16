@@ -7,7 +7,7 @@ Opa.destroy_all
 
 User.create(name: "customer1", admin: false)
 User.create(name: "customer2", admin: false)
-User.create(name: "customer3", admin: false)
+User.create(name: "admin", admin: true)
 
 Product.create(name: "BRASS SPRINKLER 155 QR", description: "155 DEGREE BRASS QUICK RESPONSE SPRINKLER", category:"SPRINKLER", price: 10.10, img: "https://cdn11.bigcommerce.com/s-hn9twptgqs/images/stencil/608x608/products/762/1243/RA1425__67885.1648147329.jpg?c=1" )
 Product.create(name: "BRASS SPRINKLER 175 QR", description: "175 DEGREE BRASS QUICK RESPONSE SPRINKLER", category: "SPRINKLER", price: 10.20, img: "https://cdn11.bigcommerce.com/s-hn9twptgqs/images/stencil/608x608/products/762/1243/RA1425__67885.1648147329.jpg?c=1")
