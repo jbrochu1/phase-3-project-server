@@ -46,8 +46,18 @@ class ApplicationController < Sinatra::Base
       total: params[:total],
       user_id: params[:user_id]
     )
-    new_order
     new_order.to_json
+  end
+
+  post '/products' do
+    new_product = Product.create(
+      name: params[:name],
+      description: params[:description],
+      category: params[:category],
+      price: params[:price],
+      img: params[:img]
+    )
+    new_product.to_json
   end
 
   post '/opas' do
