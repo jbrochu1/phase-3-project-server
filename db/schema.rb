@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2022_11_14_223641) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.boolean "admin?"
+    t.boolean "admin"
   end
 
 end

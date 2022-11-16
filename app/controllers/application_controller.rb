@@ -22,8 +22,6 @@ class ApplicationController < Sinatra::Base
     orders.to_json(include: {opas: {include: :product}})  
   end
 
-
-
   get "/opas" do
     opas = Opa.all
     opas.to_json
@@ -51,7 +49,6 @@ class ApplicationController < Sinatra::Base
     )
     new_opa.to_json
   end
-
 
   # patch '/bakeries/:id' do
   #   bakery = Bakery.find(params[:id])
