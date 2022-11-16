@@ -17,6 +17,13 @@ class ApplicationController < Sinatra::Base
     orders.to_json
   end
 
+  get "/orders/:id" do
+    orders = Order.find(params[:id])
+    orders.to_json(include: :opas)
+  end
+
+
+
   get "/opas" do
     opas = Opa.all
     opas.to_json
