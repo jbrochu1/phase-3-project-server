@@ -51,6 +51,7 @@ class ApplicationController < Sinatra::Base
       description: params[:description],
       category: params[:category],
       price: params[:price],
+      supply: params[:supply],
       img: params[:img]
     )
     new_product.to_json
