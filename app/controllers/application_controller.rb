@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
 
   get "/orders" do
     orders = Order.all
-    orders.to_json
+    orders.to_json(include: {opas: {include: :product}})  
   end
 
   get "/orders/:id" do

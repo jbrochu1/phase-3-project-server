@@ -5,8 +5,8 @@ Order.destroy_all
 Product.destroy_all
 Opa.destroy_all
 
-User.create(name: "customer1", admin: false)
-User.create(name: "customer2", admin: false)
+User.create(name: "customer1")
+User.create(name: "customer2")
 User.create(name: "admin", admin: true)
 
 Product.create(name: "BRASS SPRINKLER 155 QR", description: "155 DEGREE BRASS QUICK RESPONSE SPRINKLER", category:"SPRINKLER", price: 10.10, supply: 10, img: "https://cdn11.bigcommerce.com/s-hn9twptgqs/images/stencil/608x608/products/762/1243/RA1425__67885.1648147329.jpg?c=1" )
@@ -32,7 +32,7 @@ Product.create(name: "3 PIPE BLK STL", description: "3\" PIPE BLACK STEEL", cate
 Product.create(name: "4 PIPE BLK STL", description: "4\" PIPE BLACK STEEL", category: "PIPE", price: 3.75, supply: 10, img: "https://www.plumbingsupplynow.com/pub/media/webp_image/catalog/product/cache/9d08971813a040f8f96067a40f75c615/b/l/blacknipplelong_109.webp")
 Product.create(name: "6 PIPE BLK STL", description: "6\" PIPE BLACK STEEL", category: "PIPE", price: 4.50, supply: 10, img: "https://www.plumbingsupplynow.com/pub/media/webp_image/catalog/product/cache/9d08971813a040f8f96067a40f75c615/b/l/blacknipplelong_109.webp")
 
-Order.create(date: "23.12.2012", total: "$25", user_id: 1)
+Order.create(date: "23.12.2012", total: "25", user_id: 1)
 
 Opa.create(order_id: 1, product_id: 1, quantity: 3)
 Opa.create(order_id: 1, product_id: 2, quantity: 4)
